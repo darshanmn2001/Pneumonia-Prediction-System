@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pneumonia Prediction</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+<header class="bg-dark text-white" style="padding:20px; font-size:33px; text-align:center;">
+    <marquee behavior="" direction="">Machine Learning Based Pneumonia Prediction System</marquee>
+</header>
+
+<div class="container bg-secondary">
+    <h4> Enter Patient Details</h4>
+    <form name="f1" action="/" enctype="multipart/form-data" method="post">
+        <table class="table">
+            <tr>
+                <td>
+                    <input type="text" name="name" placeholder="Patient Name" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="file" name="img" placeholder="X-ray image" required/>
+                </td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Predict" class="btn btn-danger"/>
+
+    </form>
+
+</div>
+<br>
+<span >
+     {% if res %}
+    <h2><center>{{ res}}</center></h2>
+     {% endif %}
+</span>
+
+
+
+
+</body>
+</html>
